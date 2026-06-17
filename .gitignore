@@ -1,0 +1,12 @@
+# Cache and local environments
+__pycache__/
+*.pyc
+.venv/
+env/
+.streamlit/
+
+# Local Kaggle download cache and model checkpoints
+.kagglehub/
+*.pkl
+*.joblib
+data/
