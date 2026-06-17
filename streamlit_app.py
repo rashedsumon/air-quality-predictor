@@ -21,25 +21,7 @@ try:
     df = get_cached_data()
     
     
-    # Layout splits
-    col1, col2 = st.columns([1, 2])
     
-    with col1:
-        st.subheader("Dataset Metrics")
-        st.metric("Total Records Tracked", f"{df.shape[0]:,}")
-        st.metric("Feature Columns Found", f"{df.shape[1]}")
-        
-        # Display underlying city variables if column is present
-        city_col = [c for c in df.columns if 'city' in c]
-        if city_col:
-            unique_cities = df[city_col[0]].dropna().unique()
-            st.write(f"**Megacities Tracked:** {len(unique_cities)}")
-            st.caption(", ".join(list(unique_cities)[:10]) + "...")
-
-    with col2:
-        st.subheader("Raw Data Sample View")
-        st.dataframe(df.head(10), use_container_width=True)
-
     # 2. Extract or Generate Model Pipelines
     st.divider()
     st.subheader("🤖 Predict Urban Particulate Matter ($PM_{2.5}$)")
