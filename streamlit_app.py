@@ -19,7 +19,7 @@ def get_cached_data():
 
 try:
     df = get_cached_data()
-    st.success("Dataset pulled and synced smoothly from Kagglehub storage layers!")
+    
     
     # Layout splits
     col1, col2 = st.columns([1, 2])
