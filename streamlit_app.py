@@ -9,7 +9,7 @@ from model import train_aqi_model
 
 st.set_page_config(page_title="Global Urban Air Quality Predictor", page_icon="🌍", layout="wide")
 
-st.title("🌍 Global Urban Air Quality & Pollution Analytics")
+st.title("🌍 Global Urban Air Quality & Pollution Predicton")
 st.write("An implementation using automated data download streaming from Kagglehub.")
 
 # 1. Access Data Engine
